@@ -1,0 +1,114 @@
+<!-- Define que el documento esta bajo el estandar de HTML 5 -->
+<!doctype html>
+
+<!-- Representa la raíz de un documento HTML o XHTML. Todos los demás elementos deben ser descendientes de este elemento. -->
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title> Formulario de Acceso </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
+
+    <!-- Link hacia el archivo de estilos css -->
+    <link rel="stylesheet" href="css/login.css">
+
+    <style type="text/css">
+        .grid-container {
+            display: grid;
+            gap: 5px;
+            grid-template-columns: 200px 200px 200px;
+
+            padding: 0px;
+        }
+
+        .grid-item {}
+    </style>
+
+    <script type="text/javascript">
+
+    </script>
+
+    <script>
+        function comprobarClave() {
+            clave1 = document.f1.clave1.value
+            clave2 = document.f1.clave2.value
+
+            if (clave1 == clave2)
+                alert("Las dos claves son iguales...\nRealizaríamos las acciones del caso positivo")
+            else
+                alert("Las dos claves son distintas...\nRealizaríamos las acciones del caso negativo")
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div id="contenedor">
+        <div id="central">
+            <div id="login">
+                <div class="titulo">
+                    Registrate
+                </div>
+                <form id="loginform" action="" name="f1">
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <input type="text" name="usuario" placeholder="Nombre" minlength="5" maxlength="40" required
+                                pattern="[A-Za-z]+">
+                        </div>
+
+                        <input type="text" placeholder="Apellidos" name="apellidos" minlength="5" maxlength="40"
+                            required pattern="[A-Za-z]+">
+
+                        <select name="Select">
+                            <option value="value1" selected>CC</option>
+                            <option value="value2">ID</option>
+                            <option value="value3">Extranjero</option>
+                        </select>
+
+                        <input type="text" placeholder="Numero de documento" name="documentos" minlength="5"
+                            maxlength="40" required pattern="[0-9]+">
+
+                        <input type="text" placeholder="Telefono" name="telefono" minlength="5" maxlength="40" required
+                            pattern="[0-9]+">
+
+                        <input type="text" placeholder="Direccion" name="direccion" minlength="5" maxlength="40"
+                            required pattern="[A-Za-z0-9]+">
+
+                        <input type="text" placeholder="Email" name="email" minlength="5" maxlength="40" required>
+
+                        <input type="text" name="usuario" placeholder="Usuario" minlength="5" maxlength="40" required
+                            pattern="[A-Za-z0-9]+">
+
+                        <input type="password" placeholder="Contraseña" name="clave1" minlength="5" maxlength="40"
+                            required>
+
+                        <input type="password" placeholder="Repetir contraseña" name="clave2" minlength="5"
+                            maxlength="40" required>
+
+                         <input type="button" value="Comprobar si son iguales" onClick="comprobarClave()">
+
+                    </div>
+                   
+
+                    <button type="submit" title="Ingresar" name="Ingresar" >
+                        registrarse
+                    </button>
+
+                </form>
+                <div class="pie-form">
+                    <a href="#">¿Perdiste tu contraseña?</a>
+                    <a href="#">¿No tienes Cuenta? Registrate</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
